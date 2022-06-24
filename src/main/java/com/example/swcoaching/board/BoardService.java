@@ -13,4 +13,6 @@ public interface BoardService {
 
   BoardEntity saveBoard(BoardEntity board);
 
+  BoardEntity updateBoard(BoardEntity board, long id);
+
 }

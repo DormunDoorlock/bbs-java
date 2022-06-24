@@ -1,6 +1,7 @@
 package com.example.swcoaching.board.jpa;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
+@Setter
 @Table(name = "board")
 @Entity
 public class BoardEntity {

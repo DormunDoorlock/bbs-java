@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -49,5 +50,17 @@ public class BoardServiceImpl implements BoardService {
   @Override
   public BoardEntity saveBoard(BoardEntity boardEntity){
     return boardRepository.save(boardEntity);
+  }
+
+  @Override
+  public BoardEntity updateBoard(BoardEntity boardEntity, long id){
+    BoardEntity boardEntity1 = boardRepository.findById(id).get();
+    if (Objects.nonNull(boardEntity.getTitle()) && !"".equalsIgnoreCase(boardEntity.getTitle())){
+      boardEntity1.setTitle(boardEntity.getTitle());
+    }
+    if (Objects.nonNull(boardEntity.getRemark()) && !"".equalsIgnoreCase(boardEntity.getRemark())){
+      boardEntity1.setRemark(boardEntity.getRemark());
+    }
+    return  boardRepository.save(boardEntity1);
   }
 }

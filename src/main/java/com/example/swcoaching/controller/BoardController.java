@@ -34,6 +34,12 @@ public class BoardController {
     return "Delete Success";
   }
 
+  @PutMapping("/board/{boardId}")
+  public BoardEntity updateBoard(@RequestBody BoardEntity boardEntity,
+                                 @PathVariable long boardId){
+    return boardService.updateBoard(boardEntity,boardId);
+  }
+
   @PostMapping("/board")
   public BoardEntity saveBoard(@RequestBody BoardEntity boardEntity){
     return boardService.saveBoard(boardEntity);
