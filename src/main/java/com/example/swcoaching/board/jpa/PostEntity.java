@@ -32,4 +32,9 @@ public class PostEntity {
   @JoinColumn(name = "boardId")
   private BoardEntity board;
 
+  public void setBoard(BoardEntity board)
+  {
+    this.board= board;
+  }
+
 }

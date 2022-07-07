@@ -39,7 +39,7 @@ public class BoardServiceImpl implements BoardService {
     }
     return boardList1;
   }
-
+/*
   // 단건 삭제
   @Override
   public void deleteById(long id) {
@@ -63,4 +63,5 @@ public class BoardServiceImpl implements BoardService {
     }
     return  boardRepository.save(boardEntity1);
   }
+ */
 }

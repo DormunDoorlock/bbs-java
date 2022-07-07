@@ -9,10 +9,12 @@ public interface BoardService {
 
   List<Board> scanBoardList();
 
+  /*
   void deleteById(long id);
 
   BoardEntity saveBoard(BoardEntity board);
 
   BoardEntity updateBoard(BoardEntity board, long id);
+   */
 
 }

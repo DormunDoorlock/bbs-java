@@ -22,7 +22,7 @@ class BoardControllerTest {
   @DisplayName("게시판을 조회 한다")
   @Test
   void getMember() throws Exception {
-    mockMvc.perform(get("/", 1))
+    mockMvc.perform(get("/board/{boardId}", 1))
             .andDo(print())
             .andExpect(jsonPath("$.id").value(is(1)));
   }
