@@ -21,11 +21,10 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Execute Test
-        run: ./gradlew.bat clean test
+        run: ./gradlew test
 
       - name: Execute Gradle build
-        run: ./gradlew.bat build -x test
-
+        run: ./gradlew build -x test
 
       # 슬랙 메세지 전송
       - name: Slack Notification
