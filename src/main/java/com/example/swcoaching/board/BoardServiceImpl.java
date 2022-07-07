@@ -31,6 +31,7 @@ public class BoardServiceImpl implements BoardService {
   // 전체 조회
   @Override
   public List<Board> scanBoardList(){
+    // 수정필요, Pagination 어떻게?
     Iterable<BoardEntity> boardList = boardRepository.findAll();
     List<Board> boardList1 = new ArrayList<>();
     Iterator<BoardEntity> iter = boardList.iterator();
@@ -54,6 +55,7 @@ public class BoardServiceImpl implements BoardService {
 
   @Override
   public BoardEntity updateBoard(BoardEntity boardEntity, long id){
+    // 수정필요
     BoardEntity boardEntity1 = boardRepository.findById(id).get();
     if (Objects.nonNull(boardEntity.getTitle()) && !"".equalsIgnoreCase(boardEntity.getTitle())){
       boardEntity1.setTitle(boardEntity.getTitle());

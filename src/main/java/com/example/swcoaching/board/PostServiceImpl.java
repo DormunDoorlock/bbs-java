@@ -27,6 +27,7 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public long savePost(Long id, PostEntity postEntity){
+        // Foreign key 연계 어떻게?
         BoardEntity board = boardRepository.findById(id).get();
         postEntity.setBoard(board);
         return postRepository.save(postEntity).getId();
