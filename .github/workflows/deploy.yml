@@ -26,7 +26,6 @@ jobs:
       - name: Execute Gradle build
         run: ./gradlew build -x test
 
-
       # 슬랙 메세지 전송
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
