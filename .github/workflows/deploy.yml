@@ -21,7 +21,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Execute Test
-        run: ./gradlew.bat test
+        run: ./gradlew.bat clean test
 
       - name: Execute Gradle build
         run: ./gradlew.bat build -x test
